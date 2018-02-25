@@ -1,0 +1,31 @@
+<!DOCUMENT html>
+<html>
+    <head>
+        <title>Vue - TODO List</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="card">
+            <header>{{ title }}</header>
+            <div id="list">
+            <input id="itemForm" v-on:keypress.enter="addItem"/>
+            <button v-on:click="addItem">Add New Task</button>
+            <template v-if="items.length >0">
+               <ul>
+                <li v-for="(item, index) in items">
+                    <button class="remove" v-on:click="deleteItem(index)">X</button>
+                    {{ item.text }}
+                    <button class="done" v-on:click="doneItem">DONE</button>
+                </li>
+            </ul>
+            <ul>
+                <li>Total To Dos: {{ totalToDos }}</li>
+            </ul>  
+            </template>
+            <p v-else>You have no tasks todo, add some or go away</p>
+            </div>
+        </div>
+         <script type="text/javascript" src="lib/vue.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>

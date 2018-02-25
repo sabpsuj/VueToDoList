@@ -1,0 +1,36 @@
+#card{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
+}
+
+header{
+    background-color: darkgoldenrod;
+    color: cornsilk;
+    font-family: sans-serif;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+li{
+    border: 1px solid black;
+    list-style: none;
+    margin: 7px;
+    padding: 3px;
+}
+
+input{
+    margin: 5px 10%;
+}
+
+button.done{
+    float: right;
+}
+.done{
+    color: gray;
+    background-color: lightgreen;
+}
+
+p{
+    text-align: center;
+}
